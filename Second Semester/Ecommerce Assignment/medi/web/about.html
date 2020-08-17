@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Absolute Care</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/component.css" rel="stylesheet" type="text/css"  />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+
+<script src="js/jquery-1.11.1.min.js"></script> 
+<script src="js/modernizr.custom.js"></script>
+
+<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+</head>
+<body class="cbp-spmenu-push">
+
+	<div class="banner abt-bnr">
+
+		<div class="w3ls-header">
+			<div class="container">	
+				<div class="agile-logo">
+					<h1><a href="index.html">Absolute Care</a></h1>
+				</div>
+				<div class="top-nav">
+					<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+						<h3>Menu</h3>
+						<a href="index.html">Home</a>
+						<a href="about.html" class="active">About us</a>
+						<a href="products.html">Products</a> 
+						<a href="contact.html">Contact Us</a>
+						<a href="order.html">Order Now</a>
+					</nav>  
+					<div class="main buttonset">	
+						<button id="showRightPush"><img src="images/menu-icon.png" alt=""/></button>
+					</div>
+					<script>
+						$( "a.menu-icon" ).click(function() { 
+							$( "ul.nav1" ).slideToggle( 300, function() {
+								// Animation complete.
+							});
+						});
+					</script>
+					<script src="js/classie.js"></script>
+					<script>
+						var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+						showRightPush = document.getElementById( 'showRightPush' ),
+						body = document.body;
+
+						showRightPush.onclick = function() {
+							classie.toggle( this, 'active' );
+							classie.toggle( body, 'cbp-spmenu-push-toleft' );
+							classie.toggle( menuRight, 'cbp-spmenu-open' );
+							disableOther( 'showRightPush' );
+						};
+
+						function disableOther( button ) {
+							if( button !== 'showRightPush' ) {
+								classie.toggle( showRightPush, 'disabled' );
+							}
+						}
+					</script>
+				</div>	
+			</div>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				<li class="breadcrumb-item active">About Us</li>
+			</ol>
+		</div>
+	</div>
+	<div class="about">
+		<div class="container">			
+			<div class="about-info">
+				<div class="col-md-6 about-grids">	
+					<h3>Who We Are </h3>
+					<img src="images/img2.jpg" alt=""/>
+					<h5>Changing Lives Every Day.</h5>
+					<p> Absolute Care has built up a reputation for excellence and superiority on the foundations of consistently high quality, constantly expanding product portfolio, timely deliveries, and state-of-the-art supplying facilities, conforming to the most stringent as well demanding international standards.</p> 
+				</div>				
+				<div class="col-md-6 about-grids">
+					<h3>Our Specials</h3>
+					<h5>Improving quality while driving down costs.</h5>
+					<p>Welcome to Our Site! We are your trusted provider of quality medical supplies and equipment with overall compliance to customer satisfaction and excellence in medical support.</p>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
+										Generic Medicine
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true">
+								<div class="panel-body">
+									We Provide trusted generic medicine with high quality composition on time delivery
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										Casting Tapes
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
+								<div class="panel-body">
+									We provide globally Branded Fiber glass Synthetic Casting Tape and Cast Padding in various sizes.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingThree">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									Surgical Goods
+									</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false">
+								<div class="panel-body">
+									We provide high quality Surgical goods like Cotton crepe bandage, various type of surgical tapes and other surgical items.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingFour">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+									Medical Instruments
+									</a>
+								</h4>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour" aria-expanded="false">
+								<div class="panel-body">
+									We provide high quality medical equipment and instrument in reasonable pricing.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingFive">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+									Health Equipment
+									</a>
+								</h4>
+							</div>
+							<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive" aria-expanded="false">
+								<div class="panel-body">
+									We are the leading suppliers of Health equipment and common use items in Hospitals
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="team">
+				<h3>Our Doctors</h3>
+				<div class="team-info">
+					<div class="col-md-3 col-xs-6 team-grids"> 
+						<div class="w3team-gridinfo"> 
+							<img class="img-responsive" src="images/img3.jpg" alt="">
+							<div class="captn">
+								<h4>Dr.Shivani </h4>
+								<p>MBBS, MD – Obstetrics & Gynaecology, DNB – Medical Genetics Gynecologist, Obstetrician, Infertility Specialist,15 Years Experience</p>
+								<ul class="w3-agileitsicons">
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a class="twt" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a class="drbl" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									<li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								</ul> 
+							</div> 
+						</div>					
+					</div>					
+					<div class="col-md-3 col-xs-6 team-grids">
+						<div class="w3team-gridinfo"> 
+							<img class="img-responsive" src="images/img4.jpg" alt="">
+							<div class="captn">
+								<h4>Dr. Smriti</h4>
+								<p>MBBS, MDS – Paediatric Dentistry Director – Patient Care Services & HOD – Dental Surgery Dentist- 9 Years of Experience </p>
+								<ul class="w3-agileitsicons">
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a class="twt" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a class="drbl" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									<li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								</ul>
+							</div> 
+						</div> 
+					</div>
+					<div class="col-md-3 col-xs-6 team-grids">
+						<div class="w3team-gridinfo"> 
+							<img class="img-responsive" src="images/img5.jpg" alt="">
+							<div class="captn">
+								<h4>Dr. Mrinal</h4>
+								<p>MBBS,MS–Orthopaedics,DNB – Orthopaedics Consultant Joint Replacement and Orthopaedics Joint Replacement Surgeon,Orthopedist-11 Years of Experience</p>
+								<ul class="w3-agileitsicons">
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a class="twt" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a class="drbl" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									<li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								</ul>
+							</div> 
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6 team-grids">
+						<div class="w3team-gridinfo"> 
+							<img class="img-responsive" src="images/img6.jpg" alt="">
+							<div class="captn">
+								<h4>Dr. Urvashi</h4>
+								<p>MBBS, MS, FVRS,Consultant – Ophthalmology Opthalmologist- 12 Years of Experience</p>
+								<ul class="w3-agileitsicons">
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a class="twt" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a class="drbl" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									<li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footerw3-agile">
+		<div class="container">
+			<div class="footer-row">
+				<div class="col-md-4 footer-grids">
+					<h3>Navigation</h3>					
+					<ul>
+						<li><a href="about.html"><i class="fa fa-arrow-right" aria-hidden="true"></i> About us</a></li>
+						<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i> Products</a></li>
+						<li><a href="contact.html"><i class="fa fa-arrow-right" aria-hidden="true"></i> Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 footer-grids">
+					<h3>Working Hours</h3>
+					<ul>
+						<li>Mon - Sat :  10am - 9pm</li>
+						<li>Sunday :  By Special Appointment</li> 
+					</ul>
+				</div>
+				<div class="col-md-4 footer-grids">
+					<h2><a href="index.html">Absolute Care</a></h2>
+					<p>Absolute Care offers products of International Standards and keep strict control over quality at every stage. Our congenial environment; well-built infrastructure; energetic & highly competent technical staff and workforce; unique human relationship; efficient & committed management support are the pillar to practice up-to-date Quality Management Systems and thus results in meeting highest quality standards, safety. We also supply a number of products in the brand name, besides the generic formulations.
+
+</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="footer-left">
+				 <p>© 2020 Absolute Care . All rights reserved</p>
+			</div>
+			<div class="footer-right">
+				<ul class="w3-agileitsicons">
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a class="twt" href="#"><i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
+					<li><a class="drbl" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
+					<li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i> </a></li>
+				</ul>
+			</div>
+			<script>$(function () {
+			  $('[data-toggle="tooltip"]').tooltip()
+			})</script>
+		</div>
+	</div>
+    <script src="js/bootstrap.js"> </script>
+</body>
+</html>
