@@ -1,0 +1,10 @@
+<!ELEMENT student(student1,student2,student3)>
+<!ELEMENT student1(usn,name,noc,year,email)>
+<!ELEMENT student2(usn,name,noc,year,email)>
+<!ELEMENT student3(usn,name,noc,year,email)>
+<!ELEMENT usn(#PCDATA)>
+<!ELEMENT name(#PCDATA)>
+<!ELEMENT noc(#PCDATA)>
+<!ELEMENT year(#PCDATA)>
+<!ELEMENT email(#PCDATA)>
+

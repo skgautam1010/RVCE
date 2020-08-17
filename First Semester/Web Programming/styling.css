@@ -1,0 +1,21 @@
+<style>
+	student{display:block;border:0px 1em;width:100%;background-color:blue solid;}
+	studentinfo
+		{
+			color:white;
+			font-size:34px;
+			padding:10px;
+			background-color:green;
+		}
+	student1,student2,student3{
+					width:100%;
+					border:09px;
+					margin:10px;
+					background-color:cyan;
+					padding:07px;
+				}
+	usn,name,collegename,branch,yoj,emailid{
+			display:block;color:magenta;}
+	title{display:block;font-size:24px;margin:09px;border:06px;background-color:cyan;padding:09px;font-weight:bold;}
+</style>
+

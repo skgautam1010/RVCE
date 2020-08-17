@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><title>Digital Clock</title></head>
+<body>
+<p id="t1"> </p>
+<input type="button" value="get date" onclick="document.getElementById('t1').innerHTML = Date()"/>
+<p id="demo" style="background-color:yellow;color:blue;font-size:30px;"> </p>
+<input type="button" value="get date & time" onclick="ct()"/>
+<script type="text/javascript">
+	function c()
+	{
+		var refresh=500;
+		mytime=setTimeout('ct()',refresh)
+	}
+	function ct()
+	{
+		var x= new Date();
+		var j=x.toLocaleString();
+		var h= x.getHours();
+		var m=x.getMinutes();
+		var s=x.getSeconds();
+		h=checktime(h);
+		m=checktime(m);
+		s=checktime(s);
+		var X= x.getMonth()+1+"/"+x.getDate()+"/"+x.getFullYear();
+		var y= X +"-"+h+":"+m+":"+s+"---"+j;
+		document.getElementById('demo').innerHTML=y;
+		c();
+	}
+	function checktime(i)
+	{
+		if (i<10)
+		{
+			i="0"+i;
+		}
+		return i;
+	}
+</script>
+		
+		
+</body>
+</html>
+

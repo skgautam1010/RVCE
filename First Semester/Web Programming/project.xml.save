@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project SYSTEM "project.dtd">
+<project>
+	<pid>101</pid>
+	<name>skg</name>
+	<date>
+		<startdate>12-07-2019</startdate>
+		<enddate>3-09-2019</enddate>
+	</date>
+	<cost>
+		<mincost>5000</mincost>
+		<maxcost>10000</maxcost>
+	</cost>
+	<time>
+		<starttime>12:45pm</starttime>
+		<endtime>3:02am</endtime>
+	</time>
+	<location>india</location>
+</project>
+

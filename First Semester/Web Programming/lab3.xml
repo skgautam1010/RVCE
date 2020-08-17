@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="lab3.css"?>
+<!DOCTYPE student SYSTEM "lab3.dtd">
+<student>
+	<student1>
+		<title>First student info</title>
+		<usn>rvce19</usn>
+		<name>skg</name>
+		<noc>rvce</noc>
+		<year>2019</year>
+		<email>sdvfg@sdfg</email>
+	</student1>
+	<student2>
+		<title>Second student info</title>
+		<usn>sdfvgd</usn>
+		<name>asfe</name>
+		<noc>trgn</noc>
+		<year>vfff</year>
+		<email>vdf@</email>
+	</student2>
+	<student3>
+		<title>third student info</title>
+		<usn>fdgb</usn>
+		<name>fr</name>
+		<noc>dfgtr</noc>
+		<year>v3444</year>
+		<email>wew@frg</email>
+	</student3>
+</student>
+
+	

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head><title>form</title> 
+<script type="text/javascript">
+Function table()
+{
+	var i;
+	var n=document.getElementById("m1").Value;
+	var n1=ParseInt(n);
+	for(i=1;i<=10;i++)
+	{
+		document.write(n1*i);
+	}
+}
+</script>
+	<style>
+		*
+		{
+			background-image:mypic.jpeg;
+		}
+		</style>	
+ </head>
+<body>
+<h1 style="color:blue;"> <b>Desigining a basic form for RVCE</b></h1>
+<form action=" ">
+<fieldset>
+enter a name : <input type = "text" name ="t1" id ="t1" placeholder="enter your name"/></br>
+enter password : <input type ="password" name ="t2" id ="t2" placeholder = "enter password"/></br>
+Gender:</br>
+<input type ="radio"name ="t3"  id ="t3" value = "male"checked >male
+<input type ="radio"name = "t3"  id ="t3" value = "female" > female
+<input type ="radio" name = "t3" id ="t3" value = "transgender">transgender</br>
+Subjects:</br>
+<input type ="checkbox" id ="t4" value = "c" >c
+<input type ="checkbox" id ="t5" value = "c++">c++
+<input type ="checkbox" id ="t6" value = "java">java</br>
+Address:</br>
+<textarea name ="t7" id ="t7" rows = "10" column ="50"></textarea></br>
+State:</br>
+<select id="t1">
+	<option name ="select">select</option>
+	<option name ="bihar" selected>bihar</option>
+	<option name ="jharkhand">jharkhand</option>
+	<option name ="uttar pradesh">up</option>
+	<option name ="dellhi">delhi</option>
+	<option name ="karnataka">karnataka</option>
+	<option name ="oddhisa">oddisha</option>
+</select></br>
+<a href="http://www.rvce.edu.in" target="_self">for more information click here</a>
+<img src ="mypic.jpeg" width="50px" height="150px"align="right"/>
+<h2> record of rvce mca student<h2>
+<canvas id="mycanvas" width="200px"height="300px"style="border:05px solid green"></canvas>
+<input list="browsers">
+<datalist id="browsers">
+        <option value="safari"/>
+        <option value="moozila"/>
+        <option value="chrome"/>
+</datalist>
+	<legend>mobile no. and email</legend>
+Email-id:<input type="email"name="email"/><button>ok</button>
+mobile number:<input type="tel"name="mobile number"/><button>ok</button>
+</fieldset>
+
+<table border ="1">
+<tr>
+<th>roll no.</th>
+<th>Name</th>
+<th>class</th>
+<th>year</th>
+</tr>
+<tr>
+<td>1</td>
+<td>abc</td>
+<td>mca</td>
+<td>1st</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ghi</td>
+<td>mca</td>
+<td>2nd</td>
+</tr>
+</table>
+<datalist id="browser">
+	<option value="safari"/>
+	<option value="moozila"/>
+	<option value="chrome"/>
+</datalist>
+<input type ="submit" value ="submit">&nbsp;&nbsp;&nbsp;
+<input type ="reset" value ="reset"></br>&nbsp;&nbsp;
+Enter The number:<input type="text" name="m1" id="m1"/>
+<input type="button"value="table" onClick="table()"/>
+</form>
+<video width="250px" height="300px" controls>
+	<source src="talkingtom.mp4" type="video/mp4">
+</video>
+<audio width="100px" controls>
+	<source src="mereshoneya.mp3"type="audio/mp3">
+</audio>
+<button>
+submit form
+</button>
+
+</body>
+</html>
+
+	

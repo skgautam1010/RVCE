@@ -1,0 +1,45 @@
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/xmlschema">
+<xs:element name="student">
+<xs:complexType>
+<xs:sequence>
+	<xs:element name="student1">
+	<xs:complexType>
+	<xs:sequence>
+		<xs:element type="xs:string" name="usn"/>
+		<xs:element type="xs:string" name="name"/>
+		<xs:element type="xs:string" name="noc"/>
+		<xs:element type="xs:string" name="year"/>
+		<xs:element type="xs:string" name="email"/>
+	</xs:sequence>
+	</xs:complexType>
+	</xs:element>
+	<xs:element name="student2">
+	<xs:complexType>
+	<xs:sequence>
+		<xs:element type="xs:string" name="usn"/>
+                <xs:element type="xs:string" name="name"/>
+                <xs:element type="xs:string" name="noc"/>
+                <xs:element type="xs:string" name="year"/>
+                <xs:element type="xs:string" name="email"/>
+	</xs:sequence>
+	</xs:complexType>
+	</xs:element>
+	<xs:element name="student3">
+        <xs:complexType>
+        <xs:sequence>
+                <xs:element type="xs:string" name="usn"/>
+                <xs:element type="xs:string" name="name"/>
+                <xs:element type="xs:string" name="noc"/>
+                <xs:element type="xs:string" name="year"/>
+                <xs:element type="xs:string" name="email"/>
+        </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>
+
+
+		
+

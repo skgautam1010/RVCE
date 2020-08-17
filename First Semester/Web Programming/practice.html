@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<script>
+function square()
+{
+	var n=document.getElementById("t1").value
+	var n1=eval(n)
+	alert(n1*n1)
+}
+function clr()
+{
+	document.getElementById("t1").value = ""
+}
+function table()
+{
+	var n=document.getElementById("t1").value
+	var n1= eval(n)
+	for(var i=1;i<=10;i++)
+	{
+		document.write(n1 + "*" + i+"="+n1*i+"<br>")
+	}
+}
+function fact()
+{
+	var f1=1
+	var n=document.getElementById("t1").value
+	var n1=eval(n)
+	while(n1>0)
+	{
+		f1=f1*n1
+		n1=n1-1
+	}
+	document.write(f1)
+}
+function reverse()
+{
+	var rev = 0
+	var n=document.getElementById("t1").value
+	var n1 = eval(n)
+	while(n1>0)
+	{
+		var rem = n1%10
+		rev =rev*10+rem
+		n1= Math.floor(n1/10)
+	}
+	document.write(rev)
+}
+function wish(str)
+{
+	document.write("good morning"+ "&nbsp;"+str)
+}
+</script>
+<body>
+<p id="demo"></p>
+<h2>click button to get date and time</h2>
+<input type="text" id="t1"/>
+<input type="button" value="click to know" onclick="document.getElementById('demo').innerHTML=Date()"/>
+<input type="button" value="square" onclick="square()"/>
+<input type="button" value="clear" onclick="clr()"/>
+<input type="button" value="table" onclick="table()"/>
+<input type="button" value="factorial" onclick="fact()"/>
+<input type="button" value="reverse" onclick="reverse()"/>
+<input type="button" value="wish" onclick="wish('sonu')"/>
+</body>
+</html>
+
+

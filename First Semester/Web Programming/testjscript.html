@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>testing script</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*var emp=new emp();
+	emp.id=101;
+	emp.name="xyz";
+	emp.salary=100;*/
+	function emp(id,name,salary)
+	{
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+	}
+	var emp = new emp(101,"xyz",10000);
+		
+	document.write(emp.id+" "+emp.name+" "+emp.salary);
+function check()
+{
+	var s1=(10,20,30);
+	alert(s1);
+	var s2=["a","b","c"];
+	document.write(s2);
+	var s3=(10,20,"a");
+	alert(s3);
+}
+var s={"id":78,"name":"juk","roll":9};
+for(var p in s)
+{
+	alert(s[p]);
+}
+document.write(" "+s.id+s.name+s.roll);
+(s);
+(typeof(s));
+var str="welcome";
+var str1="skg";
+//document.write(str+' '+str.charAt(1)+' '+str.indexOf('e')+' '+str.length+' '+str.toLowerCase()+' '+str.toUpperCase()+' '+str.slice(-1)+' '+str.substring(-1)+' '+str.concat(str1)+' '+str.substr(-1)+' '+str.match("ew")+' '+str1.search("sk"));
+var a=["a","b","c","d"];
+document.write(a+' '+a.push("d")+a.join(":")+a.sort()+a.pop());
+var q=confirm("are you sure?");
+alert(q);
+var x=prompt("enter the value for a?");
+alert(x);
+</script>
+<input type="button" value="check" onclick="check()">
+</body>
+</html>

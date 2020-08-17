@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml rel="stylesheet" type="text/css" href="styling.css"?>
+<bookstore>
+	<book category="cooking">
+		<title lang="en">Everyday Italian</title>
+		<author lan="en">giada de laurentiis</author>
+		<year>2010</year>
+		<price>500</price>
+	</book>
+</bookstore>

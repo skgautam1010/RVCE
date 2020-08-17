@@ -1,0 +1,27 @@
+<style>
+	student
+	{
+		display:block;
+	}
+	student1,student2,student3{
+		display:block;
+		margin-left:30px;
+		padding:10px;
+		background-color:tomato;
+	}
+	title
+	{
+		padding:10px;
+		background-color:cyan;
+		display:block;
+	}
+	usn,name,noc,year,email{
+		display:block;
+		background-color:magenta;
+	}
+	*
+	{
+		background-color:black;
+	}
+</style>
+

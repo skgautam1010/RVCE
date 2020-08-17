@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>digital clock</title>
+<script>
+function check(h)
+{
+	if(h>12)
+	{
+		h=h-12;
+	}
+	return h;
+}
+			
+function checktime(t)
+{
+	if(t<10)
+	{
+		t= "0"+t;
+	}
+	return t;
+}
+function display_c()
+{
+	var refresh=1000;
+	mytime=setTimeout('display_ct()',refresh)
+}
+function display_ct()
+{
+	var x = new Date();
+	var d = x.getDate();
+	var mo = x.getMonth()+1;
+	var y = x.getFullYear();
+	var h = x.getHours();h=checktime(h);
+	var f=check(h);
+	var m = x.getMinutes();m=checktime(m);
+	var s = x.getSeconds();s=checktime(s);
+	var amp=(h<12||h===24)?"AM":"PM";
+	var x1 = d+"/"+mo+"/"+y+"//"+h+":"+m+":"+s+amp;
+	var x2 =d+"/"+mo+"/"+y+"//"+f+":"+m+":"+s+amp;
+	document.getElementById('p1').innerHTML = x1;
+	display_c();
+	document.getElementById('p2').innerHTML = x2;
+	display_c();
+}
+</script>
+</head>
+<body>
+<p id="p1"> </p>
+<p id="p2"> </p>
+<input type="radio" id="r1" name="r1" value= "24hr" onclick="display_ct()"/>24hr
+<input type="radio" id="r1" name="r1" value="12hr" onclick="display_ct()"/>12hr
+</body>
+</html>

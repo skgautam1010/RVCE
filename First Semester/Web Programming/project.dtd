@@ -1,0 +1,5 @@
+<!ELEMENT project((pid|mgrid|clientid),name,date,cost,time,location+)>
+<!ELEMENT date(startdate,enddate?)>
+<!ELEMENT cost(mincost?,maxcost)>
+<!ELEMENT time(starttime,endtime)>
+

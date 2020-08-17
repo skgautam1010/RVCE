@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="styling.css"?>
+<student>
+	<studentinfo>STUDENT INFORMATION</studentinfo>
+	<student1>
+		<title>Student1 Details</title>
+		<usn>USN:RVCE19MCA112</usn>
+		<name>NAME:SONU KUMAR GAUTAM</name>
+		<collegename>COLLEGE:RV College of Engineering</collegename>
+		<branch>BRANCH:MCA</branch>
+		<yoj>YOJ:2019</yoj>
+		<emailid>Email:skgautam@gmail.com</emailid>
+	</student1>
+	<student2>
+		<title>student2 Details</title>
+		<usn>USN:RVCE19MCA1</usn>
+                <name>NAME:Bhujik</name>
+                <collegename>COLLEGE:RV College of Engineering</collegename>
+                <branch>BRANCH:MCA</branch>
+                <yoj>YOJ:2019</yoj>
+                <emailid>Email:bhujj@gmail.com</emailid>
+	</student2>
+	<student3>
+		<title>Student3 Details</title>
+		 <usn>USN:RVCE19MCA3</usn>
+                <name>NAME:acde</name>
+                <collegename>COLLEGE:RV College of Engineering</collegename>
+                <branch>BRANCH:MCA</branch>
+                <yoj>YOJ:2019</yoj>
+                <emailid>Email:acde@gmail.com</emailid>
+	</student3>
+</student>
+

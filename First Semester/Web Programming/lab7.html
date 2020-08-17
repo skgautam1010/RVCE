@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>validation</title>
+<script type="text/javascript">
+	function f1(usn)
+	{
+		var pattern1=/^[1-4][A-z]{2}[0-9]{2}[A-Z]{3}[0-9]{2}$/;
+		if((!usn.value.match(pattern1))||(usn.value.length==0))
+		{
+			alert("not valid");
+			return false;
+		}
+		else
+		{
+			alert("valid");
+		}
+	}
+</script>
+</head>
+<body>
+<form>
+USN:<input type="text" id="usn" name="usn"/>
+<input type="button" value="check" onclick="f1(usn)"/>
+</form>
+</body>
+</html>

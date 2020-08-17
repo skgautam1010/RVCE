@@ -1,0 +1,57 @@
+<!DOCTYPE html
+<html>
+<head>
+<title>calculator</title>
+<script type="text/javascript">
+function clr()
+{
+	document.getElementById('t1').value =" "
+}
+function display(x)
+{
+	document.getElementById('t1').value += x
+}
+function calc()
+{
+	var x=document.getElementById('t1').value
+	var x1=eval(x)
+	document.getElementById('t1').value =x1
+}
+</script>
+</head>
+<body>
+	<table border="1" width="300">
+	<caption>CALCULATOR</caption>
+	<thead>
+		<th colspan="4"><input type="text"  id="t1" size="30"/></th>
+	</thead>
+	<tr>
+		<td><input type="button" value="7" onclick="display('7')"/></td>
+		<td><input type="button" value="8" onclick="display('8')"/></td>
+		<td><input type="button" value="9" onclick="display('9')"/></td>
+		<td><input type="button" value="/" onclick="display('/')"/></td>
+	</tr>
+	<tr>
+                <td><input type="button" value="4" onclick="display('4')"/></td>
+                <td><input type="button" value="5" onclick="display('5')"/></td>
+                <td><input type="button" value="6" onclick="display('6')"/></td>
+                <td><input type="button" value="*" onclick="display('*')"/></td>
+        </tr>
+	<tr>
+                <td><input type="button" value="3" onclick="display('3')"/></td>
+                <td><input type="button" value="2" onclick="display('2')"/></td>
+                <td><input type="button" value="1" onclick="display('1')"/></td>
+                <td><input type="button" value="-" onclick="display('-')"/></td>
+        </tr>
+	<tr>
+                <td><input type="button" value="0" onclick="display('0')"/></td>
+                <td><input type="button" value="00" onclick="display('00')"/></td>
+                <td><input type="button" value="clear" onclick="clr()"/></td>
+                <td><input type="button" value="+" onclick="display('+')"/></td>
+        </tr>
+	<tr>
+		<td colspan="4" style="text-align:center;"><input type="button" value="=" onclick="calc()"/></td>
+	</tr>
+</table>
+</body>
+</html>

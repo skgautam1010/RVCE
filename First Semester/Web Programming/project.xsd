@@ -1,0 +1,38 @@
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="project">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:byte" name="pid"/>
+        <xs:element type="xs:string" name="name"/>
+        <xs:element name="date">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="startdate"/>
+              <xs:element type="xs:string" name="enddate"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cost">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:short" name="mincost"/>
+              <xs:element type="xs:short" name="maxcost"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="time">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="starttime"/>
+              <xs:element type="xs:string" name="endtime"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="location"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
