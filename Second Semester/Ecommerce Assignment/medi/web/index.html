@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Absolute Care</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/component.css" rel="stylesheet" type="text/css"  />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<script src="js/jquery-1.11.1.min.js"></script> 
+<script src="js/modernizr.custom.js"></script>
+
+<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+</head>
+<body class="cbp-spmenu-push">
+
+	<div class="banner">
+
+		<div class="w3ls-header">
+			<div class="container">	
+				<div class="agile-logo">
+					<h1><a href="index.html">Absolute Care</a></h1>
+				</div>
+				<div class="top-nav">
+					<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+						<h3>Menu</h3>
+						<a href="index.html" class="active">Home</a>
+						<a href="about.html">About us</a>
+						<a href="products.html">Products</a>
+						<a href="order.html">Order Now</a> 
+							<ul class="nav1">
+							</ul> 	 
+						<a href="contact.html">Contact Us</a>
+					</nav>  
+					<div class="main buttonset">	
+						<button id="showRightPush"><img src="images/menu-icon.png" alt=""/></button>
+					</div>
+					<script>
+						$( "a.menu-icon" ).click(function() { 
+							$( "ul.nav1" ).slideToggle( 300, function() {
+								// Animation complete.
+							});
+						});
+					</script>
+					<script src="js/classie.js"></script>
+					<script>
+						var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+						showRightPush = document.getElementById( 'showRightPush' ),
+						body = document.body;
+
+						showRightPush.onclick = function() {
+							classie.toggle( this, 'active' );
+							classie.toggle( body, 'cbp-spmenu-push-toleft' );
+							classie.toggle( menuRight, 'cbp-spmenu-open' );
+							disableOther( 'showRightPush' );
+						};
+
+						function disableOther( button ) {
+							if( button !== 'showRightPush' ) {
+								classie.toggle( showRightPush, 'disabled' );
+							}
+						}
+					</script>
+				</div>	
+			</div>
+		</div>
+		<div class="banner-text">	
+			<h3>WELCOME TO ABSOLUTE CARE</h3> 
+			<p>absolutecare.com is a trusted Indian online medical store.upload prescription/order medicine online. Cash on Delivery available</p>
+			<h5><i class="fa fa-phone" aria-hidden="true"></i> <span>+91 98019 55394</span></h5>
+			<h5><i class="fa fa-envelope-o" aria-hidden="true"></i> <a class="email-link" href="mailto:absolute@absolutecare.com">absolute@absolutecare.com</a></h5>
+			 				 
+		</div>
+	</div>
+	<div class="hmw3layouts">
+		<div class="container">	
+			<div class="col-md-5 hmw3layouts-left">
+				<img src="images/img1.jpg" alt="">
+			</div>
+			<div class="col-md-7 hmw3layouts-left w3right">
+				<p><b>Absolute Care is a company developing a healthcare delivery platform.</br>It helps patients to connect with local pharmacy stores and diagnostic centers enabling them to order medicines, healthcare products, and diagnostic tests.</b></p>
+				<a class="btn btn-1 btn-1d scroll" href="#banner-bottom"> Read More </a>
+			</div>				
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="slid">
+		<div class="container"> 
+			<div class="col-md-3 col-sm-3 col-xs-6 slid_grid">
+				<div class="slid_text">
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='2000' data-delay='.5' data-increment="5">2000</div>
+					<p>Drugs</p>	
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6 slid_grid slid_grid2">
+				<div class="slid_text">
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='150' data-delay='.5' data-increment="5">150</div>
+					<p>Our Staff</p>	
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6 slid_grid slid_grid3">
+				<div class="slid_text">
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='0018' data-delay='.5' data-increment="1">0018</div>				
+					<p>Branches</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6 slid_grid slid_grid4">
+				<div class="slid_text">
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='2800' data-delay='.5' data-increment="10">2800</div>
+					<p>Clients</p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="banner-bottom" id="banner-bottom">
+		<div class="container">	
+			<h3 class="w3l-title">What is Absolute Care</h3>
+			<p class="title">Absolute Care is a company developing a healthcare delivery platform.</br>It helps patients to connect with local pharmacy stores and diagnostic centers enabling them to order medicines, healthcare products, and diagnostic tests.</p>
+			<div class="bottom-grids">
+				<div class="col-md-4 bttm-grids-info">
+					<h5>Say Goodbye to All Your Healthcare Worries With Absolute Care!</h5>
+					<p>Absolute Care is here to help you take it easy! We are amongst one of India's top online pharmacy and health care platforms. It enables you to purchase medicines online by connecting you to registered retail pharmacies and get them delivered to your home. We make online medicine purchase easy, simple and affordable!</p>
+				</div>
+				<div class="col-md-4 bttm-grids-info">
+					<h5>How Are We Making Lives Simpler? </h5>
+					<p>Our doorstep medicine delivery service is available PAN-India. This online medicine portal also allows you to choose from 1 lakh+ healthcare products, OTC products and medical equipment. PharmEasy is a one-stop platform where you can also book diagnostic tests including blood tests, full-body checkups, and other preventive health check-ups at an affordable cost, right from the comfort of your home. We have partnered with trusted & certified labs that arrange for a sample pick-up from the convenience of your home. They also provide you with timely reports.</p>
+				</div>
+				<div class="col-md-4 bttm-grids-info">
+					<h5>We've got India Covered!</h5>
+					<p>We now deliver medicines across 1000+ cities and towns, covering 22000+ pin codes in the country!
+Our Diagnostic Test services are available in Mumbai including Thane, Navi Mumbai, Kalyan & Dombivali, Delhi with Noida, Gurgaon, Faridabad & Ghaziabad, Chennai, Pune, Ahmedabad and Gandhi Nagar, Surat, Vadodara, Lucknow, Kolkata, Hyderabad, Bengaluru, and Jaipur.</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="testi agileits-w3layouts">
+		<div class="container">
+			<h3 class="w3l-title">TESTIMONIALS</h3>
+			<p class="title">WHAT OUR CUSTOMERS SAY<br>We would like to hear your comments about our service</p>			
+			<script src="js/responsiveslides.min.js"></script>
+			<script>
+				// You can also use "$(window).load(function() {"
+					$(function () {
+					// Slideshow 3
+						$("#slider3").responsiveSlides({
+						auto: true,
+						pager:true,
+						nav:false,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+						$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+							$('.events').append("<li>after event fired.</li>");
+						}
+					});	
+				});
+			</script>
+			<div  id="top" class="callbacks_container">
+				<ul class="rslides" id="slider3">
+					<li>					
+						<p>""I would like to show my gratitude to you and your team for the excellent work that you are doing right now. This is a kind of service you are providing for a social cause. Please keep up the good work. I sincerely thank you for all your efforts and bringing good health to millions of people here in India.</p>
+						<h4>Rajen Ghosh </h4>
+					</li>
+					<li>					
+						<p>"I am a regular purchaser of Medicines required for me and my family from Absolute Care since long time and am satisfied with their services."</p>
+						<h4>K P N KUTTY</h4>
+					</li>
+					<li>					
+						<p>"I have been fetching my family medicines for a long time and have not found anything to complain. Compared to other online medicine sites Absolute Care stands above all. "</p>
+						<h4>SRIKANTH KWTHAM </h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="services" id="services">
+		<div class="container">
+			<h3 class="w3l-title">Our Services</h3>
+			<p class="title">At Absolute care we provide different service such as home delivery,cash on delivery and other digital payment modes,government authorised medicines with checked expiry dates.we provide on call doctor facilities to urgently needed patients .</p>			
+			<div class="service-agileinfo">
+				<div class="col-md-4 col-sm-4 srvc-wthreegrids">
+					<div class="srvc-img">
+						<i class="fa fa-user-md" aria-hidden="true"></i>
+					</div>
+					<h5>Doctors</h5>
+				</div>
+				<div class="col-md-4 col-sm-4 srvc-wthreegrids">
+					<div class="srvc-img">
+						<i class="fa fa-medkit" aria-hidden="true"></i>
+					</div>
+					<h5>Medicines</h5>
+					
+				</div>
+				<div class="col-md-4 col-sm-4 srvc-wthreegrids">
+					<div class="srvc-img">
+						<i class="fa fa-ambulance" aria-hidden="true"></i>
+					</div>
+					<h5>Ambulance</h5>
+				</div>
+				<div class="clearfix"> </div>				
+			</div>
+		</div>
+	</div>
+	<div class="footerw3-agile">
+		<div class="container">
+			<div class="footer-row">
+				<div class="col-md-4 footer-grids">
+					<h3>Navigation</h3>					
+					<ul>
+						<li><a href="about.html"><i class="fa fa-arrow-right" aria-hidden="true"></i> About us</a></li>
+						<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i> Products</a></li>
+						<li><a href="contact.html"><i class="fa fa-arrow-right" aria-hidden="true"></i> Contact Us</a></li>
+						<li><a href="order.html"><i class="fa fa-arrow-right" aria-hidden="true"></i> Order Now</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 footer-grids">
+					<h3>Working Hours</h3>
+					<ul>
+						<li>Mon - Sat :  10am - 9pm</li>
+						<li>Sunday :  By Special Appointment</li> 
+					</ul>
+				</div>
+				<div class="col-md-4 footer-grids">
+					<h2><a href="index.html">Absolute Care</a></h2>
+					<p></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="footer-left">
+		<p>© 2020 Absolute Care . All rights reserved</p>		
+			</div>
+			<div class="footer-right">
+				<ul class="w3-agileitsicons">
+					<li><a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a class="twt" href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
+					<li><a class="drbl" href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
+					<li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i> </a></li>
+				</ul>
+			</div>
+			<script>$(function () {
+			  $('[data-toggle="tooltip"]').tooltip()
+			})</script>
+		</div>
+	</div>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<script type="text/javascript" src="js/numscroller-1.0.js"></script>
+    <script src="js/bootstrap.js"> </script>
+</body>
+</html>
