@@ -1,0 +1,15 @@
+from tkinter import *
+def sel():
+    selection="you selected the option" +str(var.get())
+    label.config(text=selection)
+root=Tk()
+var=IntVar()
+r1=Radiobutton(root,text="option 1",value='1',variable=var,command=sel)
+r2=Radiobutton(root,text='option2',value=2,variable=var,command=sel)
+r3=Radiobutton(root,text='option3',value=3,variable=var,command=sel)
+r1.pack(ancho='w')
+r2.pack(anchor='w')
+r3.pack(anchor='w')
+label=Label(root)
+label.pack()
+root.mainloop()

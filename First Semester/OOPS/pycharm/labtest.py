@@ -1,0 +1,22 @@
+while True :
+        print ("1: enter 1 for exit\n")
+        print ("2: enter 2 for concatenation\n")
+        print ("3: enter 3 for upper case\n")
+        print ("4: enter 4 for lower case\n")
+        print ("5: enter 5 for length\n")
+        print ("6: enter 6 for reverse\n")
+        print ("7: enter 7 for  slicing\n")
+        print ("8: enter 8 for range slicing\n")
+        print ("9: enter 9 for no white space\n")
+        print ("10: enter 10 for is a  digit or not\n")
+        print ("11: enter 11 for finding word\n")
+        print ("12: enter 12 for repalce\n")
+        print ("13: enter 13 for sort\n")
+        print ("14: enter 14 for string comparison\n")
+        print ("15: enter 15 for spliting\n")
+        ch = int(input("enter the choice\n")
+        if ch == 2 :
+            a = input("enter the first string\n")
+            b = input("enter the second string\n")
+            print(a + b)
+
