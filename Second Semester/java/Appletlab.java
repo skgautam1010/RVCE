@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.applet.*;
 
-/*<applet code="Appletlab" width=1200 height=900></applet>*/
+/*<applet code="Appletlab" width=0 height=0></applet>*/
 public class Appletlab extends Applet implements ActionListener
 {
 	Button b1,b2,b3;
