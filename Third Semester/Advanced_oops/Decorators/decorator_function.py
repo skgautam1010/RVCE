@@ -110,26 +110,26 @@
 
 #hash("Hello world")
 
-# def star(func):
-#     def my_print(args):
-#         print('*'*30)
-#         func(args)
-#         print('*'*30)
-#     return my_print
+ def star(func):
+     def my_print(args):
+         print('*'*30)
+         func(args)
+         print('*'*30)
+     return my_print
 
-# def hash(func):
-#     def my_print(args):
-#         print('#*'*30)
-#         func(args)
-#         print('#*'*30)
-#     return my_print
+ def hash(func):
+     def my_print(args):
+         print('#*'*30)
+         func(args)
+         print('#*'*30)
+     return my_print
 
-# @hash
-# @star
-# def printmsg(q):
-#     print(q)
+ @hash
+ @star
+ def printmsg(q):
+     print(q)
 
-# printmsg('sk gautam')
+printmsg('sk gautam')
 
 
 

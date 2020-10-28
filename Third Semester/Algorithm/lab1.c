@@ -1,80 +1,69 @@
 #include<stdio.h>
 #include<sys/time.h>
-
-int a[500];
-int partition(int l,int h)
+#include<string.h>
+char str[300];
+char pattern[200];
+int string_match()
 {
-	int temp,i,j,pivot;
-	pivot=a[l];
-	i=l;
-	j=h;
-	while(i<=j)
+	int n=strlen(str);
+	int m=strlen(pattern);
+	int i,j;
+	for(i=0;i<=n-m;i++)
 	{
-		while(a[i]<=pivot && i<=h)
+		j=0;
+		while(j<m && str[i+j]==pattern[j])
 		{
-			i++;
+			j++;
+			if(j==m)
+			{
+				return i;
+			}
 		}
-		while(a[j]>pivot && j>=l)
+	}
+	return -1;
+}
+void main()
+{
+	int n,pos,k,num;
+	float t1,t2;
+	struct timeval begin,end;
+	FILE *fp;
+	fp=fopen("string.txt","w");
+	for(k=0;k<3;k++)
+	{
+		printf("\nEnter String: ");
+		gets(str);
+		n=strlen(str);
+		printf("\nEnter pattern for best case: ");
+		gets(pattern);
+		gettimeofday(&begin,NULL);
+		pos=string_match();
+		gettimeofday(&end,NULL);
+		if(pos==-1)
 		{
-			j--;
-		}
-		if(i<j)
-		{
-			temp=a[i];
-			a[i]=a[j];
-			a[j]=temp;
+			printf("\nNot Found");
 		}
 		else
 		{
-			temp=a[l];
-			a[l]=a[j];
-			a[j]=temp;
-		}
-	}
-	return j;
-}
-
-void quicksort(int l,int h)
-{
-	if(l<h)
-	{
-		int j=partition(l,h);
-		quicksort(l,j-1);
-		quicksort(j+1,h);
-	}
-}
-
-void main()
-{
-	int p,q,m,n;
-	FILE *fp;
-	float t1;
-	struct timeval begin,end;
-	fp=fopen("quick.txt","a+");
-	printf("\nenter the number of iterations: ");
-	scanf("%d",&m);
-	for(q=0;q<m;q++)
-	{
-		printf("\nenter the number of elements: ");
-		scanf("%d",&n);
-		srand(time(0));
-		for(p=0;p<n;p++)
-		{
-			a[p]=rand()%100+1;
-			printf("%d\t",a[p]);
-		}
-		gettimeofday(&begin,NULL);
-		quicksort(0,n-1);
-		gettimeofday(&end,NULL);
-		printf("\nSorted Array: \n");
-		for(p=0;p<n;p++)
-		{
-			printf("%d\t",a[p]);
+			printf("\nFound at position: %d",pos+1);
 		}
 		t1=end.tv_usec-begin.tv_usec;
-		printf("\nTime taken is: %1.2f\n",t1);
-		fprintf(fp,"%d \t %1.2f \n",n,t1);
+		printf("\nEnter pattern for worst case: ");
+		gets(pattern);
+		gettimeofday(&begin,NULL);
+		pos=string_match();
+		gettimeofday(&end,NULL);
+		if(pos==-1)
+		{
+			printf("\nNot found");
+		}
+		else
+		{
+			printf("\nFound at position: %d",pos+1);
+		}
+		t2=end.tv_usec-begin.tv_usec;
+		printf("\nTime taken by string of length %d is %1.2f and %1.2f\n",n,t1,t2);
+		fprintf(fp,"%d\t%1.2f\t%1.2f\n",n,t1,t2);
 	}
 	fclose(fp);
 }
-
