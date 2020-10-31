@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<sys/time.h>
 
-int a[500];
+int a[5000];
 int partition(int l,int h)
 {
 	int temp,i,j,pivot;
