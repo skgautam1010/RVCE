@@ -5,7 +5,7 @@ def calculate_time(func):
 		begin=time.time()
 		func()
 		end=time.time()
-		print("total time taken: ",round(end-begin,2))
+		print("total time taken: ",end-begin)
 	return inner_func
 
 
@@ -19,9 +19,10 @@ def fib():
 @calculate_time
 def find_fibonnaci():
 	g=fib()
-	n=int(input("Enter the number: "))
 	for _ in range(n):
 		print(next(g))
 
+
+n=int(input("Enter the number: "))
 find_fibonnaci()
 
