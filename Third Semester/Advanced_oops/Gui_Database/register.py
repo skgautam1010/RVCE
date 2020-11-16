@@ -25,7 +25,7 @@ def insert_data():
         tb4.get() == "" or
         tb5.get() == "" or
         tb6.get() == "" or
-        tb7.get() == ""): 
+        tb7.get() == ""):
 
         messagebox.showerror("Error!!!",'Empty Fields!! All fields required!!')
     else:
