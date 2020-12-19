@@ -12,7 +12,7 @@ def clear():
     tb7.delete(0,'end')
 
 def insert_data():
-    username=tb1.get()
+    usn=tb1.get()
     name=tb2.get()
     age=tb3.get()
     address=tb4.get()
@@ -32,7 +32,8 @@ def insert_data():
         try:
             db=py.connect("localhost","root","Skg@123!","advance_oops")
             cursor=db.cursor()
-            cursor.execute("insert into registration values('"+ username +"','"+ name +"','"+ age +"','"+ address +"','"+ gender +"','"+ email +"','"+ password +"')")
+            cursor.execute("insert into registration values('"+ usn +"','"+ name +"','"+ age +"','"+ address +"','"+ gender +"','"+ email +"','"+ password +"')")
+            cursor.execute("insert into login values('"+ usn +"','"+ password +"')")
             db.commit()
             messagebox.showinfo("Success","Registration successfull!!")
         except:
@@ -45,7 +46,7 @@ def insert_data():
 window=Tk()
 window.title("Registration page")
 window.geometry('900x700')
-label1=Label(window,text="Username: ")
+label1=Label(window,text="Usn: ")
 label1.place(x='50',y='100')
 label2=Label(window,text="Name: ")
 label2.place(x='50',y='150')

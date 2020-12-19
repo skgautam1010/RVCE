@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 #define INFINITY 9999
 #define MAX 10
 
@@ -12,8 +13,17 @@ int main()
 	printf("\nEnter the adjacency matrix:\n");
 
 	for (i = 0; i < n; i++)
+	{
 		for (j = 0; j < n; j++)
+		{
 			scanf("%d", &ar[i][j]);
+			if(ar[i][j]<0)
+			{
+				printf("the cost entered is less than zero please provide a value more than zero\n");
+				exit(0);
+			}
+		}
+	}
 
 	printf("\nEnter the starting node:");
 	scanf("%d", &start);

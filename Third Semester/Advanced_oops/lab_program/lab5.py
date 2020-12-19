@@ -1,5 +1,4 @@
 import pymysql as py
-import getpass
 
 
 class Student(object):
