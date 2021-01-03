@@ -1,0 +1,20 @@
+<html>
+<body>
+{% block content %}
+<table>
+	<tr>
+		<th>eid</th>
+		<th>name</th>
+		<th>add</th>
+	</tr>
+	{% for d in sh %}
+	<tr>
+		<td>{{ d.eid }}</td>
+		<td>{{ d.name }}</td>
+		<td>{{ d.add }}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock %}
+</body>
+</html>
