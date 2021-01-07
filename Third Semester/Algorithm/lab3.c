@@ -9,7 +9,6 @@ void main(){
 
 	printf("\nEnter the elements in adjacency matrix :-\n");
 	for(i=0;i<n;i++){
-		printf("\nEnter for row %d : ",i+1);
 		for(j=0;j<n;j++){
 			scanf("%d",&ar[i][j]);
 			if(i == j){
@@ -34,13 +33,11 @@ void main(){
 		indeg[i]=0;
 		flag[i]=0;
 	}
-	
 	for(i=0;i<n;i++){
 		for(j=0;j<n;j++){
 			indeg[i]=indeg[i]+ar[j][i];
 		}
 	}
-	
 	while (count < n)
         {
 
@@ -48,7 +45,7 @@ void main(){
                 {
                         if (indeg[i] == 0 && flag[i] == 0)
                         {
-                                printf("%d -> ", i + 1);
+                                printf("%d -> ", i);
                                 flag[i] = 1;
                                 for (j = 0; j < n; j++)
                                         if (ar[i][j] == 1)
@@ -60,6 +57,4 @@ void main(){
                 count++;
         }
         printf("\n");
-	
 }
-	

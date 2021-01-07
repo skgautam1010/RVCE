@@ -61,7 +61,8 @@ void main()
         else
             printf("\n The pattern was not found in the given text!\n");
 
-        printf("\nEnter the pattern to be searched in worst case :\n");
+	t1 = en.tv_usec - st.tv_usec;
+        printf("\nEnter the pattern to be searched in worst case :");
         gets(pat);
         gettimeofday(&st, 0);
         shift_table(pat);
