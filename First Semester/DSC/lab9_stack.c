@@ -1,6 +1,21 @@
 #include<stdio.h>
-int G[20][20],visited[10],n;
+int G[20][20],top=-1,visited[10],n,st[40];
 void dfs(int);
+void print(int n)
+{
+	int i;
+	if(top==-1)
+	{
+		printf("Stack Underflow\n");
+	}
+	else
+	{
+		for(i=0;i<n;i++)
+		{
+			printf("%d\n",st[top--]);
+		}
+	}
+}
 void main()
 {
 	int i,j,v;
@@ -18,18 +33,28 @@ void main()
 	printf("enter the starting vertex:  ");
 	scanf("%d",&v);
 	dfs(v);
+	print(n);
 }
 void dfs(int v)
 {
 	int i;
-	printf("%d\n",v);
+	//printf("%d\n",v);
 	visited[v]=1;
 	for(i=0;i<n;i++)
 	{
 		if(!visited[i] && G[v][i]==1)
 		{
-			printf("%d-->%d\t",v,i);
-			dfs(i);
+			//printf("%d-->%d\t",v,i);
+			if(top==n-1)
+			{
+				printf("Stack Overflow\n");
+			}
+			else
+			{
+				top++;
+				st[top]=i;
+				dfs(i);
+			}
 		}
 	}
 }

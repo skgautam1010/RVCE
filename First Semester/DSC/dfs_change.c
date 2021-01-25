@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-int a[20][20],q[20],visited[20],size;
+int a[20][20],q[20],visited[20],size,stack[50];
 void dfs(int);
 int main()
 {

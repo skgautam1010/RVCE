@@ -156,23 +156,23 @@ int main()
 { 
     // x-cordinate represents a Worker 
     // y-cordinate represents a Job 
-    int costMatrix[N][N] = 
+    /*int costMatrix[N][N] = 
     { 
         {9, 2, 7, 8}, 
         {6, 4, 3, 7}, 
         {5, 8, 1, 8}, 
         {7, 6, 9, 4} 
-    }; 
+    };*/ 
   
   
-    /* int costMatrix[N][N] = 
+     int costMatrix[N][N] = 
     { 
         {82, 83, 69, 92}, 
         {77, 37, 49, 92}, 
         {11, 69,  5, 86}, 
         { 8,  9, 98, 23} 
     }; 
-    */
+    
   
     /* int costMatrix[N][N] = 
     { 
