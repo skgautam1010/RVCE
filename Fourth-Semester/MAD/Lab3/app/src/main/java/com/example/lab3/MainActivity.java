@@ -8,9 +8,7 @@ import android.content.pm.PackageManager;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.File;
@@ -24,16 +22,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (ActivityCompat.checkSelfPermission(this,Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
-        {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
-        }
-
-        if(ActivityCompat.checkSelfPermission(this,Manifest.permission.RECORD_AUDIO)!=PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, PackageManager.PERMISSION_GRANTED);
-        }
         setContentView(R.layout.activity_main);
+
+        ActivityCompat.requestPermissions(this,new String[] {Manifest.permission.RECORD_AUDIO,Manifest.permission.WRITE_EXTERNAL_STORAGE},PackageManager.PERMISSION_GRANTED);
         mediaRecorder=new MediaRecorder();
     }
 
@@ -46,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         File path= Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         File file=new File(path,"/AudioRecording.3gp");
 
-        mediaRecorder.setOutputFile(file.getAbsolutePath());
+        mediaRecorder.setOutputFile(file);
         mediaRecorder.prepare();
         mediaRecorder.start();
             Toast.makeText(getApplicationContext(),"Recording Started",Toast.LENGTH_LONG).show();
