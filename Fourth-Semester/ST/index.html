@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Marks Sheet</title>
+</head>
+<body>
+<table cellspacing="2px" cellpadding="2">
+	<tr>
+		<th>Student Name</th>
+		<th>Subject-1</th>
+		<th>Subject-2</th>
+		<th>Subject-3</th>
+		<th>Subject-4</th>
+		<th>Subject-5</th>
+		<th>Total</th>
+		<th>Percentage</th>
+		<th>Result</th>
+	</tr>
+<tr>
+	
+	<td><input type="text" name="name" id="name"></td>
+	<td><input type="text" name="sub-1"></td>
+	<td><input type="text" name="sub-2"></td>
+	<td><input type="text" name="sub-3"></td>
+	<td><input type="text" name="sub-4"></td>
+	<td><input type="text" name="sub-5"></td>
+	<td><input type="text" name="total"></td>
+	<td><input type="text" name="percent"></td>
+	<td><input type="text" name="result"></td>
+
+</tr>
+<tr>
+	
+	<td><input type="text" name="name1"></td>
+	<td><input type="text" name="sub-1"></td>
+	<td><input type="text" name="sub-2"></td>
+	<td><input type="text" name="sub-3"></td>
+	<td><input type="text" name="sub-4"></td>
+	<td><input type="text" name="sub-5"></td>
+	<td><input type="text" name="total"></td>
+	<td><input type="text" name="percent"></td>
+	<td><input type="text" name="result"></td>
+
+</tr>
+<tr>
+	
+	<td><input type="text" name="name"></td>
+	<td><input type="text" name="sub-1"></td>
+	<td><input type="text" name="sub-2"></td>
+	<td><input type="text" name="sub-3"></td>
+	<td><input type="text" name="sub-4"></td>
+	<td><input type="text" name="sub-5"></td>
+	<td><input type="text" name="total"></td>
+	<td><input type="text" name="percent"></td>
+	<td><input type="text" name="result"></td>
+
+</tr>
+<tr>
+	
+	<td><input type="text" name="name"></td>
+	<td><input type="text" name="sub-1"></td>
+	<td><input type="text" name="sub-2"></td>
+	<td><input type="text" name="sub-3"></td>
+	<td><input type="text" name="sub-4"></td>
+	<td><input type="text" name="sub-5"></td>
+	<td><input type="text" name="total"></td>
+	<td><input type="text" name="percent"></td>
+	<td><input type="text" name="result"></td>
+
+</tr>
+
+</table><br><br>
+<input type="submit" name="btn" onclick="calculate()" value="Calculate">
+<script type="text/javascript">
+	function calculate(){
+
+for(var i =0;i<4;i++){
+		var sub1=parseInt(document.getElementsByName("sub-1")[i].value);
+		
+		var sub2=parseInt(document.getElementsByName("sub-2")[i].value);
+		
+		var sub3=parseInt(document.getElementsByName("sub-3")[i].value);
+		var sub4=parseInt(document.getElementsByName("sub-4")[i].value);
+		var sub5=parseInt(document.getElementsByName("sub-5")[i].value);
+		var total=sub1+sub2+sub3+sub4+sub5;
+		document.getElementsByName("total")[i].value=total;
+
+		var percent=(total/500)*100;
+		document.getElementsByName("percent")[i].value=percent;
+		if(percent<50)
+			document.getElementsByName("result")[i].value="Fail";
+		else if(percent >=50 && percent <60)
+			document.getElementsByName("result")[i].value="Pass";
+		else if(percent >=60 && percent <70)
+			document.getElementsByName("result")[i].value="1st class";
+		else if(percent >=70 && percent <=100)
+			document.getElementsByName("result")[i].value="Distinction";
+	}
+
+	}
+
+</script>
+</body>
+</html>
