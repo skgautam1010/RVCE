@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +14,6 @@
         android:text="Automobile Details"
         android:textColor="#9C27B0"
         android:textSize="30sp" />
-
     <EditText
         android:id="@+id/etname"
         android:layout_width="match_parent"
@@ -24,7 +22,6 @@
         android:layout_marginTop="20dp"
         android:background="#fff"
         android:hint="Enter Name" />
-
     <EditText
         android:id="@+id/etmodel"
         android:layout_width="match_parent"
@@ -33,7 +30,6 @@
         android:layout_marginTop="20dp"
         android:background="#fff"
         android:hint="Enter Model" />
-
     <Button
         android:id="@+id/btnstore"
         android:layout_width="wrap_content"
@@ -41,7 +37,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:text="Store" />
-
     <Button
         android:id="@+id/btnget"
         android:layout_width="wrap_content"
@@ -49,7 +44,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:text="Fetch" />
-
     <Button
         android:id="@+id/btnemail"
         android:layout_width="wrap_content"
@@ -57,7 +51,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:text="Email" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"

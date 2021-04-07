@@ -7,7 +7,6 @@
     android:background="#FFFCFC"
     android:orientation="vertical"
     tools:context=".GetAllUsersActivity">
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,12 +15,10 @@
         android:textSize="20sp"
         android:textColor="#000"
         android:text="Data from SQLite"/>
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/lv">
     </ListView>
-
 
 </android.widget.LinearLayout>

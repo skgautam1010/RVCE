@@ -1,7 +1,5 @@
 package com.example.crud;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -10,26 +8,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import java.util.List;
-
 public class MainActivity extends AppCompatActivity {
-
     private Button btnStore, btnGetall, btnEmail;
     private EditText etname, etmodel;
     private DatabaseHelper databaseHelper;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         databaseHelper = new DatabaseHelper(this);
-
         btnStore = (Button) findViewById(R.id.btnstore);
         btnGetall = (Button) findViewById(R.id.btnget);
         etname = (EditText) findViewById(R.id.etname);
         etmodel = (EditText) findViewById(R.id.etmodel);
         btnEmail=(Button)findViewById(R.id.btnemail);
+
         btnStore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Stored Successfully!", Toast.LENGTH_SHORT).show();
             }
         });
-
         btnGetall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,11 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         btnEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Intent intent = new Intent(Intent.ACTION_SEND);
+                final Intent intent = new Intent(android.content.Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 final PackageManager pm = getPackageManager();
                 final List<ResolveInfo> matches = pm.queryIntentActivities(intent, 0);
@@ -61,11 +53,9 @@ public class MainActivity extends AppCompatActivity {
                             info.activityInfo.name.toLowerCase().contains("gmail")) best = info;
                 if (best != null)
                     intent.setClassName(best.activityInfo.packageName,best.activityInfo.name);
+
                 startActivity(intent);
             }
         });
-    }
-}
-
     }
 }
