@@ -1,5 +1,25 @@
 from selenium import webdriver
-
-
+import time
+timestr=time.strftime("%y%m%d-%H%M%S")
 driver=webdriver.Chrome("chromedriver_linux64/chromedriver")
-driver.get("https://www.rvce.edu.in")
+driver.implicitly_wait(10)
+driver.maximize_window()
+driver.get("file:///home/sonu/Desktop/RVCE/Fourth-Semester/ST/html_pages/login.html")
+time.sleep(5)
+driver.save_screenshot('home/sonu/Pictures/initial_login.png')
+driver.save_screenshot("loginscreenbeforeEntering the details"+timestr+".png")
+driver.find_element_by_id('User').send_keys('admin')
+driver.find_element_by_id('Pass').send_keys('root123')
+driver.save_screenshot('home/sonu/Pictures/logincredentials.png')
+driver.save_screenshot("logincredentials"+timestr+".png")
+driver.find_element_by_css_selector('form#frmlog>input:nth-of-type(2)').click()
+driver.save_screenshot('home/sonu/Pictures/success-screen.png')
+driver.get("file:///home/sonu/Desktop/RVCE/Fourth-Semester/ST/html_pages/login.html")
+driver.find_element_by_id('User').send_keys('administrator')
+driver.find_element_by_id('Pass').send_keys('root123')
+driver.save_screenshot('home/sonu/Pictures/wrong-credentials.png')
+#driver.find_element_by_css_selector('form#frmlog>input:nth-of-type(1)').click()
+driver.save_screenshot('home/sonu/Pictures/reset.png')
+#assertTrue(driver.find_element_by_xpath(".//label"),"Username")
+driver.close()
+driver.quit()

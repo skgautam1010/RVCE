@@ -39,15 +39,14 @@ function login()
 	{
 		var uname = document.getElementById("User").value;
 		var pwd = document.getElementById("Pass").value;
-<!--	if(uname=="admin" && pwd=="root123")
-	{
-	
-			}
+		if(uname=="admin" && pwd=="root123")
+		{
+			window.location.href="success.html";
+		}
 	else
 	{
-		alert("enter valid credentials")
+		document.write("  Invalid credentials")
 	}
--->
 }
 	//Reset Inputfield code.
 	function clearFunc()
@@ -79,7 +78,7 @@ function login()
 	<td></td>
 	<td>
 	<input type="submit" value="Reset" onclick="clearFunc()" class="btn" />
-	<input type="submit" value="Login" class="btn" onClick="login()" /></td>
+	<input type="submit" value="Login" id="btn"  onClick="login()" /></td>
 	</tr>
 	</table>
 	</div>
