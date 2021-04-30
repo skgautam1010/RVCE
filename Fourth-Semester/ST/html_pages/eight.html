@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td,
+        th {
+            border: 1px solid black;
+            width: 140px;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            width: 140px;
+        }
+
+        input[type=button] {
+            color: white;
+            background-color: grey;
+            outline: none;
+            border: none;
+            font-size: 20px;
+
+        }
+    </style>
+    <script>
+        function cal() {
+            eight.oneTotal.value = parseInt(eight.oneSubOne.value) + parseInt(eight.oneSubTwo.value) + parseInt(eight.oneSubThree.value) + parseInt(eight.oneSubFour.value) + parseInt(eight.oneSubFive.value);
+            eight.onePercentage.value = eight.oneTotal.value / 5;
+            if (parseInt(eight.onePercentage.value) >= 50) {
+                eight.oneResult.value = "Pass";
+
+            }
+            else {
+                eight.oneResult.value = "Fail";
+            }
+
+            eight.twoTotal.value = parseInt(eight.twoSubOne.value) + parseInt(eight.twoSubTwo.value) + parseInt(eight.twoSubThree.value) + parseInt(eight.twoSubFour.value) + parseInt(eight.twoSubFive.value);
+            eight.twoPercentage.value = eight.twoTotal.value / 5;
+            if (parseInt(eight.twoPercentage.value) >= 50) {
+                eight.twoResult.value = "Pass";
+
+            }
+            else {
+                eight.twoResult.value = "Fail";
+            }
+
+            eight.threeTotal.value = parseInt(eight.threeSubOne.value) + parseInt(eight.threeSubTwo.value) + parseInt(eight.threeSubThree.value) + parseInt(eight.threeSubFour.value) + parseInt(eight.threeSubFive.value);
+            eight.threePercentage.value = eight.threeTotal.value / 5;
+            if (parseInt(eight.threePercentage.value) >= 50) {
+                eight.threeResult.value = "Pass";
+
+            }
+            else {
+                eight.threeResult.value = "Fail";
+            }
+
+            eight.fourTotal.value = parseInt(eight.fourSubOne.value) + parseInt(eight.fourSubTwo.value) + parseInt(eight.fourSubThree.value) + parseInt(eight.fourSubFour.value) + parseInt(eight.fourSubFive.value);
+            eight.fourPercentage.value = eight.fourTotal.value / 5;
+            if (parseInt(eight.fourPercentage.value) >= 50) {
+                eight.fourResult.value = "Pass";
+
+            }
+            else {
+                eight.fourResult.value = "Fail";
+            }
+
+            eight.fiveTotal.value = parseInt(eight.fiveSubOne.value) + parseInt(eight.fiveSubTwo.value) + parseInt(eight.fiveSubThree.value) + parseInt(eight.fiveSubFour.value) + parseInt(eight.fiveSubFive.value);
+            eight.fivePercentage.value = eight.fiveTotal.value / 5;
+            if (parseInt(eight.fivePercentage.value) >= 50) {
+                eight.fiveResult.value = "Pass";
+
+            }
+            else {
+                eight.fiveResult.value = "Fail";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="eight">
+
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Subject 1</th>
+                <th>Subject 2</th>
+                <th>Subject 3</th>
+                <th>Subject 4</th>
+                <th>Subject 5</th>
+                <th>Total</th>
+                <th>Percentage</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="student" /></td>
+                <td><input type="number" class="marks" name="oneSubOne"></td>
+                <td><input type="number" class="marks" name="oneSubTwo"></td>
+                <td><input type="number" class="marks" name="oneSubThree"></td>
+                <td><input type="number" class="marks" name="oneSubFour"></td>
+                <td><input type="number" class="marks" name="oneSubFive"></td>
+                <td><input type="number" class="total" name="oneTotal"></td>
+                <td><input type="number" class="percentage" name="onePercentage"></td>
+                <td><input type="text" class="result" name="oneResult"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="student" /></td>
+                <td><input type="number" class="marks" name="twoSubOne"></td>
+                <td><input type="number" class="marks" name="twoSubTwo"></td>
+                <td><input type="number" class="marks" name="twoSubThree"></td>
+                <td><input type="number" class="marks" name="twoSubFour"></td>
+                <td><input type="number" class="marks" name="twoSubFive"></td>
+                <td><input type="number" class="total" name="twoTotal"></td>
+                <td><input type="number" class="percentage" name="twoPercentage"></td>
+                <td><input type="text" class="result" name="twoResult"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="student" /></td>
+                <td><input type="number" class="marks" name="threeSubOne"></td>
+                <td><input type="number" class="marks" name="threeSubTwo"></td>
+                <td><input type="number" class="marks" name="threeSubThree"></td>
+                <td><input type="number" class="marks" name="threeSubFour"></td>
+                <td><input type="number" class="marks" name="threeSubFive"></td>
+                <td><input type="number" class="total" name="threeTotal"></td>
+                <td><input type="number" class="percentage" name="threePercentage"></td>
+                <td><input type="text" class="result" name="threeResult"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="student" /></td>
+                <td><input type="number" class="marks" name="fourSubOne"></td>
+                <td><input type="number" class="marks" name="fourSubTwo"></td>
+                <td><input type="number" class="marks" name="fourSubThree"></td>
+                <td><input type="number" class="marks" name="fourSubFour"></td>
+                <td><input type="number" class="marks" name="fourSubFive"></td>
+                <td><input type="number" class="total" name="fourTotal"></td>
+                <td><input type="number" class="percentage" name="fourPercentage"></td>
+                <td><input type="text" class="result" name="fourResult"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="student" /></td>
+                <td><input type="number" class="marks" name="fiveSubOne"></td>
+                <td><input type="number" class="marks" name="fiveSubTwo"></td>
+                <td><input type="number" class="marks" name="fiveSubThree"></td>
+                <td><input type="number" class="marks" name="fiveSubFour"></td>
+                <td><input type="number" class="marks" name="fiveSubFive"></td>
+                <td><input type="number" class="total" name="fiveTotal"></td>
+                <td><input type="number" class="percentage" name="fivePercentage"></td>
+                <td><input type="text" class="result" name="fiveResult"></td>
+            </tr>
+        </table><br>
+        <center><input type="button" name="calc" onclick="cal()" value="Calculate" /></center>
+    </form>
+</body>
+
+</html>

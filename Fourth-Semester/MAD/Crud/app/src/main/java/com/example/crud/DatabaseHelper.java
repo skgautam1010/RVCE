@@ -38,12 +38,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + TABLE_USER + "'");
         onCreate(db);
     }
-    public long addUserDetail(String name, String hobby) {
+    public long addUserDetail(String name, String model) {
         SQLiteDatabase db = this.getWritableDatabase();
 // Creating content values
         ContentValues values = new ContentValues();
         values.put(KEY_FIRSTNAME, name);
-        values.put(KEY_MODEL, hobby);
+        values.put(KEY_MODEL, model);
 // insert row in students table
         long insert = db.insert(TABLE_USER,
                 null, values);
@@ -69,12 +69,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return userModelArrayList;
     }
-    public int updateUser(int id, String name, String hobby) {
+    public int updateUser(int id, String name, String model) {
         SQLiteDatabase db = this.getWritableDatabase();
 // Creating content values
         ContentValues values = new ContentValues();
         values.put(KEY_FIRSTNAME, name);
-        values.put(KEY_MODEL, hobby);
+        values.put(KEY_MODEL, model);
 // update row in students table base on students.is value
         return db.update(TABLE_USER, values, KEY_ID + " = ?",
                 new String[]{String.valueOf(id)});

@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title></title>
+    <style>
+        input {
+            width: 160px;
+            border: none;
+            outline: none;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function copy() {
+            hidden_element = document.getElementById('hiddden_element')
+            hiddden_element.setAttribute('value', 'Active')
+        }
+        function calc() {
+            db.hra1.value = parseInt(db.sal1.value) * 0.20;
+            db.da1.value = parseInt(db.sal1.value) * 0.40;
+            db.gs1.value = parseInt(db.hra1.value) + parseInt(db.da1.value) + parseInt(db.sal1.value);
+            db.hra2.value = parseInt(db.sal2.value) * 0.20;
+            db.da2.value = parseInt(db.sal2.value) * 0.40;
+            db.gs2.value = parseInt(db.hra2.value) + parseInt(db.da2.value) + parseInt(db.sal2.value);
+            db.hra3.value = parseInt(db.sal3.value) * 0.20;
+            db.da3.value = parseInt(db.sal3.value) * 0.40;
+            db.gs3.value = parseInt(db.hra3.value) + parseInt(db.da3.value) + parseInt(db.sal3.value)
+            db.hra4.value = parseInt(db.sal4.value) * 0.20;
+            db.da4.value = parseInt(db.sal4.value) * 0.40;
+            db.gs4.value = parseInt(db.hra4.value) + parseInt(db.da4.value) + parseInt(db.sal4.value);
+        }
+    </script>
+    <form name="db">
+        <center>
+            <table cellspacing="2px" cellpadding="2">
+                <tr>
+                    <th>Employee Name:</th>
+                    <th>Employee ID:</th>
+                    <th>Employee Join_Date:</th>
+                    <th>years of exp</th>
+                    <th>Salary</th>
+                    <th>HRA</th>
+                    <th>DA</th>
+                    <th>GS</th>
+                </tr>
+                <tr>
+                    <td><input type=text value="" class="name"></td>
+                    <td><input type=text value="" class="emp_id"></td>
+                    <td><input type=text value="" class="join_date"></td>
+                    <td><input type=text value="" class="years_of_exp"></td>
+                    <td><input type=text value="" name="sal1" class="salary"></td>
+                    <td><input type=text value="" name="hra1" class="hra"></td>
+                    <td><input type=text value="" name="da1" class="da"></td>
+                    <td><input type=text value="" name="gs1" class="gs"></td>
+
+                </tr>
+                <tr>
+                    <td><input type=text value="" class='name'></td>
+                    <td><input type=text value="" class='emp_id'></td>
+                    <td><input type=text value="" class="join_date"></td>
+                    <td><input type=text value="" class="years_of_exp"></td>
+                    <td><input type=text value="" name="sal2" class="salary"></td>
+                    <td><input type=text value="" name="hra2" class="hra"></td>
+                    <td><input type=text value="" name="da2" class="da"></td>
+                    <td><input type=text value="" name="gs2" class="gs"></td>
+                </tr>
+                <tr>
+                    <td><input type=text value="" class='name'></td>
+                    <td><input type=text value="" class='emp_id'></td>
+                    <td><input type=text value="" class="join_date"></td>
+                    <td><input type=text value="" class="years_of_exp"></td>
+                    <td><input type=text value="" name="sal3" class="salary"></td>
+                    <td><input type=text value="" name="hra3" class="hra"></td>
+                    <td><input type=text value="" name="da3" class="da"></td>
+                    <td><input type=text value="" name="gs3" class="gs"></td>
+                </tr>
+                <tr>
+                    <td><input type=text value="" class='name'></td>
+                    <td><input type=text value="" class='emp_id'></td>
+                    <td><input type=text value="" class="join_date"></td>
+                    <td><input type=text value="" class="years_of_exp"></td>
+                    <td><input type=text value="" name="sal4" class="salary"></td>
+                    <td><input type=text value="" name="hra4" class="hra"></td>
+                    <td><input type=text value="" name="da4" class="da"></td>
+                    <td><input type=text value="" name="gs4" class="gs"></td>
+                </tr>
+                <tr>
+            </table>
+        </center>
+    </form>
+    <center><input type="button" id="calculate" value="Calculate" onclick="calc()"
+            style="height:50px;width:100px;color:white;background-color:black">
+        <input type="button" id="copy" value="copy" onclick="copy()" style="height:50;width:100;">
+        <input type="hidden" id="hiddden_element" value="">
+    </center>
+</body>
+
+</html>
