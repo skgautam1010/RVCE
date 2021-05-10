@@ -1,6 +1,6 @@
 
-from credential import func
-user_name,pass_word=func()
+user_name="#"
+pass_word="#"
 import time
 import unittest
 from selenium import webdriver

@@ -1,27 +1,117 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<title>github</title>
-    </head>
 
+    </head>
+    <link rel="manifest" href="manifest.json">
     <style>
-        .center {
-         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        height:50%;
-    }
+               table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color :antiquewhite;
+}
+
+tr:nth-child(even) {
+  background-color: black;
+}
+
+tr:nth-child(odd) {
+    background-color:blue;
+}
+
     </style>
     <link rel="manifest" href="manifest.json">
     <body>
-        <h1>Github Profile</h1>
+        <center>
+            <br/>
+        <h1>Github Profile</h1><br/><br/>
         <input type="text" id="text_input">
         <input type="button" onclick="gitdata()" value="get profile">
         <div id='git_image'>
-            <img src="" alt="profile image" id="image" class="center">
-            <p id='para'></p>
+            <img src="" alt="profile image" id="image">
+           <!-- <p style="color:antiquewhite;visibility: hidden;" id='para'></p>-->
+        <table style="width:100%">
+            <tr>
+            <td>UserName </td> <td><p id='demo'></p></td>
+            </tr>
+            <tr>
+                <td>Followers </td><td><p id='demo1'></p></td>
+            </tr>
+            <tr>
+                <td>Following </td><td> <p id='demo2'></p></td>
+            </tr>
+            <tr>
+                <td>ID </td><td> <p id='demo3'></p></td>
+            </tr>
+            <tr>
+                <td>Location </td><td> <p id='demo4'></p></td>
+            </tr>
+            <tr>
+                <td>Avatar URL </td><td> <p id='demo5'></p></td>
+            </tr>
+            <tr>
+                <td>Node ID </td> <td><p id='demo6'></p></td>
+            </tr>
+            <tr>
+                    <td>Gravatar ID </td> <td><p id='demo7'></p></td>
+            </tr>
+             <tr>
+                <td>URL </td> <td><p id='demo8'></p></td>
+            </tr>
+                        <tr>
+                            <td>HTML URL </td> <td><p id='demo9'></p></td> 
+                            </tr>
+                            <tr>
+                                <td>Followers_URL </td> <td><p id='demo10'></p></td>
+                                </tr>
+                                <tr>
+                                    <td>Following_URL </td> <td><p id='demo11'></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Subscriptions_URL </td> <td><p id='demo12'></p></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Organizations_URL </td> <td><p id='demo13'></p></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Repos_URL </td> <td><p id='demo14'></p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Company </td> <td><p id='demo15'></p></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Email </td> <td><p id='demo16'></p></td>
+                                                        </tr><tr>
+                                                            <td>Hireable</td> <td><p id='demo17'></p></td>
+                                                            </tr><tr>
+                                                                <td>Bio</td> <td><p id='demo18'></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Twitter_username</td> <td><p id='demo19'></p></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Public_repos</td> <td><p id='demo20'></p></td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td>Created_at</td> <td><p id='demo21'></p></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Updated_at</td> <td><p id='demo22'></p></td>
+                                                                                </tr>
+                                                                                     
+        </table>
         </div>
+    </center>
     </body>
 <script>
     function gitdata(){
@@ -35,8 +125,32 @@
         var im = document.getElementById("image");
         im.setAttribute("src",data.avatar_url);
         
-        var gi= document.getElementById('para');
-        gi.innerHTML=(JSON.stringify(data));
+        //var gi= document.getElementById('para');
+        //gi.innerHTML=JSON.stringify(data);
+        document.getElementById("demo").innerHTML = data.login;
+        document.getElementById("demo1").innerHTML = data.followers;
+        document.getElementById("demo2").innerHTML = data.following;
+        document.getElementById("demo3").innerHTML = data.id;
+        document.getElementById("demo4").innerHTML = data.location;
+        document.getElementById("demo5").innerHTML = data.avatar_url;
+        document.getElementById("demo6").innerHTML = data.node_id;
+        document.getElementById("demo7").innerHTML = "NULL";
+        document.getElementById("demo8").innerHTML = data.url;
+        document.getElementById("demo9").innerHTML = data.html_url;
+        document.getElementById("demo10").innerHTML = data.followers_url;
+        document.getElementById("demo11").innerHTML = data.following_url;
+        document.getElementById("demo12").innerHTML = data.subscriptions_url;
+        document.getElementById("demo13").innerHTML = data.organizations_url;
+        document.getElementById("demo14").innerHTML = data.repos_url;
+        document.getElementById("demo15").innerHTML = data.company;
+        document.getElementById("demo16").innerHTML = "NULL";
+        document.getElementById("demo17").innerHTML = "NULL";
+        document.getElementById("demo18").innerHTML = data.bio;
+        document.getElementById("demo19").innerHTML = data.twitter_username;
+        document.getElementById("demo20").innerHTML = data.public_repos;
+        document.getElementById("demo21").innerHTML = data.created_at;
+        document.getElementById("demo22").innerHTML = data.updated_at;
+
 
     })
 
@@ -46,9 +160,7 @@
     });;
     
 }
-</script>
-<script>
-    if('serviceWorker' in navigator){
+if('serviceWorker' in navigator){
         window.addEventListener('load',()=>{
             navigator.serviceWorker.register('sw.js')
         .then(registration =>{
