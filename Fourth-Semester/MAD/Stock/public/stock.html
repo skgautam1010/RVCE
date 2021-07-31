@@ -2,7 +2,7 @@
 <html>
     <head>
 
-    </head>
+           </head>
     <link rel="manifest" href="manifest.json">
     <body>
         <center>
@@ -10,12 +10,11 @@
         <table id='tbl' border=1>
             <tr>
                 <th style="width: 90px;background-color:black;color:cyan;">S No.</th>
-                <th style="width: 120px;background-color:black;color:cyan;">Receviables</th>
-                <th style="width: 120px;background-color:black;color:cyan;">Cash and cash equivalents</th>
-                <th style="width: 120px;background-color:black;color:cyan;">Total currency assets</th>
-                <th style="width: 120px;background-color:black;color:cyan;">Paybles</th>
-                <th style="width:120px;background-color:black;color:cyan;">Total Debt</th>
-                <th style="width: 120px;background-color:black;color:cyan;">Net Debt</th>
+                <th style="width: 120px;background-color:black;color:cyan;">Date</th>
+                <th style="width: 120px;background-color:black;color:cyan;">Open</th>
+                <th style="width: 120px;background-color:black;color:cyan;">High</th>
+                <th style="width: 120px;background-color:black;color:cyan;">Low</th>
+                <th style="width:120px;background-color:black;color:cyan;">Close</th>
             </tr>
         </table>
 
@@ -33,12 +32,12 @@
     </body>
     <script>
         window.addEventListener('DOMContentLoaded', (event) =>{
-            fetch("https://financialmodelingprep.com/api/v3/financials/balance-sheet-statement/AAPL?period=quarter&apikey=demo")
+            fetch("https://mboum.com/api/v1/hi/history/?symbol=F&interval=5m&diffandsplits=true&apikey=demo")
             .then(response => response.json())
             .then(data => {
                 var dat = JSON.stringify(data);
 
-                dat1 = data['financials'];
+                dat1 = Object.value(data.items);
 
                 var bod = document.getElementById("body");
                 var tb = document.getElementById("tbl");
@@ -53,34 +52,31 @@
                     tb.appendChild(tr);
 
                     var td = document.createElement('td');
-                    td.innerHTML = dat1[i].Receivables;
+                    td.innerHTML = dat1[i].date;
                     tr.appendChild(td);
                     tb.appendChild(tr);
 
                     var td = document.createElement('td');
-                    td.innerHTML = dat1[i]["Cash and cash equivalents"];
+                    td.innerHTML = dat1[i].open;
                     tr.appendChild(td);
                     tb.appendChild(tr);
 
                     var td = document.createElement('td');
-                    td.innerHTML = dat1[i]["Total current assets"];
+                    td.innerHTML = dat1[i].high;
                     tr.appendChild(td);
                     tb.appendChild(tr);
 
                     var td = document.createElement('td');
-                    td.innerHTML = dat1[i].Payables;
+                    td.innerHTML = dat1[i].low;
                     tr.appendChild(td);
                     tb.appendChild(tr);
 
                     var td = document.createElement('td');
-                    td.innerHTML = dat1[i]["Total debt"];
+                    td.innerHTML = dat1[i].close;
                     tr.appendChild(td);
                     tb.appendChild(tr);
 
-                    var td = document.createElement('td');
-                    td.innerHTML = dat1[i]["Net Debt"];
-                    tr.appendChild(td);
-                    tb.appendChild(tr);
+                    
                 }
 
             })

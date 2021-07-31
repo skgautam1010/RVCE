@@ -1,7 +1,12 @@
 var express = require('express'); 
 var bodyParser = require('body-parser');
 var app = express();
+const cors=require('cors');
 app.use(bodyParser.json());
+
+app.use(cors({
+	'origin':'*',
+}))
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.use('/images', express.static(__dirname + '/public/images'));
